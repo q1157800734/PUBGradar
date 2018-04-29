@@ -1,6 +1,47 @@
-°æ±¾¸üĞÂÈçÏÂ
-1£ºĞŞ¸´µØÍ¼²»¼ÓÔØ»ò¼ÓÔØÂıÎÊÌâ
-2£ºÓÅ»¯Ò»¼ü°²×°
-3£º¹Ø»úºóÒ»¼üÆô¶¯¹¦ÄÜ
-4£ºÈ¥³ıÈËÎïÔÓÂë
-5£ºÓÅ»¯²¿·Ö¿ÉĞŞ¸´Æ«ÒÆ
+ç‰ˆæœ¬æ›´æ–°å¦‚ä¸‹
+1ï¼šä¿®å¤åœ°å›¾ä¸åŠ è½½æˆ–åŠ è½½æ…¢é—®é¢˜
+2ï¼šä¼˜åŒ–ä¸€é”®å®‰è£…
+3ï¼šå…³æœºåä¸€é”®å¯åŠ¨åŠŸèƒ½
+4ï¼šå»é™¤äººç‰©æ‚ç 
+5ï¼šä¼˜åŒ–éƒ¨åˆ†å¯ä¿®å¤åç§»
+ä¸€é”®æ­å»ºï¼š
+yum install git
+git clone https://github.com/moonspell99c/PUBGradar.git
+cd PUBGradar/
+chmod u+x update.sh
+./update.sh
+
+
+é‡å¯åå¯åŠ¨æˆ–æ‰“ä¸å¼€ç½‘é¡µä»£ç ï¼š
+cd PUBGradar/
+chmod u+x restart.sh
+./restart.sh
+æ…¢æ­¥æ­å»ºï¼š
+wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh
+chmod +x shadowsocks-all.sh
+./shadowsocks-all.sh 2>&1 | tee shadowsocks-all.log
+curl https://raw.githubusercontent.com/creationix/nvm/v0.13.1/install.sh | bash
+source ~/.bash_profile
+nvm install v9.8.0
+nvm alias default v9.8.0
+yum -y install gcc-c++
+yum -y install flex
+yum -y install bison
+wget http://www.tcpdump.org/release/libpcap-1.8.1.tar.gz
+tar -zxvf libpcap-1.8.1.tar.gz
+cd libpcap-1.8.1
+./configure
+make
+make install
+yum install git
+git clone https://github.com/moonspell99c/PUBGradar.git
+cd PUBGradar/
+npm i
+npm i -g pino
+npm install -g forever
+forever start index.js sniff eth0 172.31.***.*** | pino
+
+é‡å¯åå¯åŠ¨æˆ–æ‰“ä¸å¼€ç½‘é¡µä»£ç ï¼š
+cd PUBGradar/
+chmod u+x restart.sh
+./restart.sh
